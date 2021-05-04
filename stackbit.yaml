@@ -1,0 +1,140 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+publishDir: public
+dataDir: gatsby-theme-intro/content
+models:
+  profile:
+    type: data
+    label: Profile
+    file: profile.yaml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: initials
+          label: Initials
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: profession
+          label: Profession
+        - type: image
+          name: image
+          label: Image
+        - type: string
+          name: location
+          label: Location
+        - type: boolean
+          name: relocation
+          label: Relocation
+        - type: string
+          name: company
+          label: Company
+        - type: boolean
+          name: for_hire
+          label: For Hire
+        - type: string
+          name: focus
+          label: Focus
+        - type: string
+          name: focus_url
+          label: Focus Url
+        - type: text
+          name: about
+          label: About
+        - type: list
+          name: skills
+          label: Skills
+          items:
+            type: string
+        - type: list
+          name: tools
+          label: Tools
+          items:
+            type: string
+        - type: object
+          name: budget
+          label: Budget
+          fields:
+            - type: string
+              name: currency
+              label: Currency
+            - type: number
+              name: min
+              label: Min
+              subtype: int
+            - type: number
+              name: max
+              label: Max
+              subtype: int
+            - type: number
+              name: default
+              label: Default
+              subtype: int
+  projects:
+    type: data
+    label: Projects
+    file: projects.yaml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: url
+          label: Url
+        - type: string
+          name: description
+          label: Description
+        - type: string
+          name: status
+          label: Status
+        - type: list
+          name: tags
+          label: Tags
+          items:
+            type: string
+        - type: string
+          name: icon
+          label: Icon
+        - type: image
+          name: image
+          label: Image
+  social:
+    type: data
+    label: Social
+    file: social.yaml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: url
+          label: Url
+  work_history:
+    type: data
+    label: Work History
+    file: work-history.yaml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: company
+          label: Company
+        - type: string
+          name: position
+          label: Position
+        - type: string
+          name: period
+          label: Period
+        - type: string
+          name: url
+          label: Url
